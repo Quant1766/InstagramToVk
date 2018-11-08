@@ -78,9 +78,8 @@ input = threaded_input
 class PartialContentException(Exception):
     pass
 
-class InstagramScraper(object):
-    """InstagramScraper scrapes and downloads an instagram user's photos and videos"""
-
+class InstagramToVk(object):
+    
     def __init__(self, **kwargs):
         default_attr = dict(username='', usernames=[], filename=None,
                             login_user=None, login_pass=None,
@@ -117,7 +116,7 @@ class InstagramScraper(object):
             self.latest = True
 
         # Set up a logger
-        self.logger = InstagramScraper.get_logger(level=logging.DEBUG, verbose=default_attr.get('verbose'))
+        self.logger = InstagramToVk.get_logger(level=logging.DEBUG, verbose=default_attr.get('verbose'))
 
         self.posts = []
         self.session = requests.Session()
